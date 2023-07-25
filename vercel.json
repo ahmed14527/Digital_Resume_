@@ -1,0 +1,18 @@
+{
+
+    "builds":[{
+        "src":"resume_app/wsgi.py",
+        "use":"@vercel/python",
+        "config":{"maxlsmbdasize":"15mb","runtime":"python3.11"}
+    }
+    ],
+    
+
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"resume_app/wsgi.py"
+        }
+    ]
+
+}
